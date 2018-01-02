@@ -2,20 +2,17 @@
 
 This code implements the video- and sensor-based action segmentation models from [Temporal Convolutional Networks for Action Segmentation and Detection](https://arxiv.org/abs/1611.05267) by
 [Colin Lea](http://colinlea.com/), [Michael Flynn](https://zo7.github.io/), Rene Vidal, Austin Reiter, Greg Hager 
-arXiv 2016 (in-review). 
+arXiv 2016. 
 
-It was originally developed for use with the [50 Salads](http://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/), [GTEA](http://ai.stanford.edu/~alireza/GTEA/), [MERL Shopping](http://www.merl.com/demos/merl-shopping-dataset), and [JIGSAWS](http://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/) datasets. Recently we have also achieved high action segmentation performance on medical data, in robotics applications, and using accelerometer data from the [UCI Smartphone](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) dataset.
+It was originally developed for use with the [50 Salads](http://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/), [GTEA](http://ai.stanford.edu/~alireza/GTEA/), [MERL Shopping](http://www.merl.com/demos/merl-shopping-dataset), and [JIGSAWS](http://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/) datasets. 
 
-An abbreviated version of this work was described at the [ECCV 2016  Workshop on BNMW](http://bravenewmotion.github.io/).
+Expanding upon the publicly available JIGSAW dataset, several machine learning algorithms were optimized for use in real robotics applications derived from radical prostatectomies, from da Vinci Surgical Systems (SI model). 
 
-Requirements: TensorFlow, Keras (1.1.2+)
+Requirements: TensorFlow, Keras (1.1.2+), Python 3.5
 
 Requirements (optional): 
 * [Numba](http://numba.pydata.org/): This makes the metrics much faster to compute but can be removed is necessary.
-* [LCTM](https://github.com/colincsl/LCTM): Our older Conditional Random Field-based models.
-
-Tested on Python 3.5. May work on Python 2.7 but is untested.
-
+* [LCTM](https://github.com/colincsl/LCTM): Our older Conditional Random Field-based models
 
 ### Contents (code folder)
 
@@ -41,4 +38,14 @@ Each set of features should be placed in the ``features`` folder (e.g., `[TCN_di
 Each .mat file contains three or four types of data: 'Y' refers to the ground truth action labels for each sequence, 'X' is the per-frame probability as output from a Spatial CNN applied to each frame of video, 'A' is the 128-dim intermediate fully connected layer from the Spatial CNN applied at each frame, and if available 'S' is the sensor data (accelerometer signals in 50 Salads, robot kinematics in JIGSAWS). 
 
 There are a set of corresponding splits for each dataset in `[TCN_directory]/splits/[dataset].` These should be easy to use with the dataset loader included here.
+
+### Results
+
+For the JIGSAW data, the results and the parameters to achieve them can be found [here](https://www.dropbox.com/).
+
+Currently collecting metrics for real data. 
+
+### Contact
+
+For questions regarding the architectures used for optimization of real surgical data, contact hy002014@mymail.pomona.edu. 
 
