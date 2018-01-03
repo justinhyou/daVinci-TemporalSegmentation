@@ -6,7 +6,7 @@ arXiv 2016.
 
 It was originally developed for use with the [50 Salads](http://cvip.computing.dundee.ac.uk/datasets/foodpreparation/50salads/), [GTEA](http://ai.stanford.edu/~alireza/GTEA/), [MERL Shopping](http://www.merl.com/demos/merl-shopping-dataset), and [JIGSAWS](http://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/) datasets. 
 
-Expanding upon the publicly available JIGSAW dataset, several machine learning algorithms were optimized for use in real robotics applications derived from radical prostatectomies, from da Vinci Surgical Systems (SI model). 
+Expanding upon the publicly available JIGSAW dataset, several machine learning algorithms were optimized for use in real robotics applications derived from radical prostatectomies, from *da Vinci* Surgical Systems (SI model). 
 
 Requirements: TensorFlow, Keras (1.1.2+), Python 3.5
 
@@ -23,7 +23,7 @@ Requirements (optional):
 * `tf_models.py` -- Models built with TensorFlow / Keras.
 * `utils.py` -- Utilities for manipulating data.
 
-### Data
+### Data 
 
 The features used for many of the datasets we use are linked below. The video features are the output of a Spatial CNN trained using image and motion information as mentioned in the paper. To get features from the MERL dataset talk to Bharat Signh at UMD.
 
@@ -39,6 +39,13 @@ Each .mat file contains three or four types of data: 'Y' refers to the ground tr
 
 There are a set of corresponding splits for each dataset in `[TCN_directory]/splits/[dataset].` These should be easy to use with the dataset loader included here.
 
+Similar to the JIGSAW dataset (further description found [here](https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)), which was collected
+from the *da Vinci* SI model, real patient data was collected for both kinematics and video streams for in-depth analysis of real life applications of 
+machine learning techniques in robot-assisted surgery. This dataset was the ultimate set from which variants of ML algorithms were tested and developed.
+
+This data is not publicly available. However, questions regarding the data can be directed at (Justin) Hyobin You (hy002014@mymail.pomona.edu).
+
+
 ### Results
 
 For the JIGSAW data, the results and the parameters to achieve them can be found [here](https://www.dropbox.com/).
@@ -47,5 +54,5 @@ Currently collecting metrics for real data.
 
 ### Contact
 
-For questions regarding the architectures used for optimization of real surgical data, contact hy002014@mymail.pomona.edu. 
+For questions regarding the architectures used for optimization of real surgical data, contact (Justin) Hyobin You at hy002014@mymail.pomona.edu. 
 
