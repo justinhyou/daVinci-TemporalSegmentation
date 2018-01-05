@@ -48,9 +48,7 @@ This data is not publicly available. However, questions regarding the data can b
 
 ### Results
 
-For the JIGSAW data, the results and the parameters to achieve them can be found [here](https://www.dropbox.com/).
-
-Currently collecting metrics for real data. 
+The results and the parameters to achieve them can be found [here](https://www.overleaf.com/read/xwtyzzbvxzcg). 
 
 ### Contact
 
